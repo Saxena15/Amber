@@ -62,7 +62,7 @@ if __name__ == "__main__":
     while True:
         query = takeCommand().lower()
 
-        if 'time' in query:
+        if 'wikipedia' in query:
             speakAudio('Searching Wikipedia...')
             query = query.replace("wikipedia", "")
             results = wikipedia.summary(query, sentences=2)
@@ -85,18 +85,18 @@ if __name__ == "__main__":
             strTime = datetime.datetime.now().strftime("%H:%M:%S")
             speakAudio(f"Sir, the time is {strTime}")
 
-        elif 'Android studio' in query:
-            path = "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Android Studio\\bin\\studio64.exe"
-            os.startfile(path)
-        # elif 'Spotify' in query:
-        #     session = spotify.Session()
-
-        elif 'python development ide' in query:
-            path = "C:\\Program Files\\JetBrains\\PyCharm Community Edition 2021.1\\bin\\pycharm64.exe"
-            os.startfile(path)
-        elif 'telegram' in query:
-            path = "E:\\Telegram Desktop\\Telegram"
-            os.startfile(path)
+        # elif 'Android studio' in query:
+        #     path = "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Android Studio\\bin\\studio64.exe"
+        #     os.startfile(path)
+        # # elif 'Spotify' in query:
+        # #     session = spotify.Session()
+        #
+        # elif 'python development ide' in query:
+        #     path = "C:\\Program Files\\JetBrains\\PyCharm Community Edition 2021.1\\bin\\pycharm64.exe"
+        #     os.startfile(path)
+        # elif 'telegram' in query:
+        #     path = "E:\\Telegram Desktop\\Telegram"
+        #     os.startfile(path)
 
         elif 'see ya' in query:
             speakAudio(" bye sir")
