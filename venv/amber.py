@@ -1,14 +1,13 @@
-import os
-
-import speech_recognition as sr
-import pyttsx3
 import datetime
-import wikipedia
-import webbrowser
 import os
+import webbrowser
+
+
+import pyttsx3
+import speech_recognition as sr
+import wikipedia
 
 # import chrome
-import pyaudio
 
 engine = pyttsx3.init('sapi5')
 voice = engine.getProperty('voices')
@@ -26,7 +25,7 @@ def wishme():
     else:
         speakAudio("Good Evening!")
 
-    speakAudio("I am Amber Sir. Please tell me how may I help you")
+    speakAudio("hi")
 
 
 def speakAudio(audio):
@@ -94,17 +93,23 @@ if __name__ == "__main__":
         # elif 'python development ide' in query:
         #     path = "C:\\Program Files\\JetBrains\\PyCharm Community Edition 2021.1\\bin\\pycharm64.exe"
         #     os.startfile(path)
-        # elif 'telegram' in query:
-        #     path = "E:\\Telegram Desktop\\Telegram"
-        #     os.startfile(path)
+        elif 'telegram' in query:
+            path = "E:\\Telegram Desktop\\Telegram"
+            os.startfile(path)
 
-        elif 'see ya' in query:
+        elif 'recognition' in query:
+            path = "C:\\Users\\Akash\\PycharmProjects\\tenso\\prac.py"
+            os.startfile(path)
+
+
+
+        elif 'see you' in query:
             speakAudio(" bye sir")
 
             break
 
         else:
-            speakAudio("mehhhh")
+            speakAudio("ehh")
 
     else:
 
